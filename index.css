@@ -9,12 +9,14 @@ html {
 body {
   background: #eee;
   background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
-  padding: 0 16px;
+  /* padding: 0 16px; */
+  max-height: 100vh;
+  max-width: 100vw;
 }
 
 header {
   background-color: #f5ba13;
-  margin: auto -16px;
+  margin: 0 auto;
   padding: 16px 32px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
@@ -31,11 +33,19 @@ footer {
   bottom: 0;
   width: 100%;
   height: 2.5rem;
+  padding-bottom: 50px;
 }
 
 footer p {
   color: rgb(141, 141, 141);
+  font-size: .8rem;
 }
+
+footer a {
+  text-decoration: none;
+  font-weight: 500;
+}
+
 .note {
   background: #fff;
   border-radius: 7px;
@@ -76,6 +86,16 @@ form.create-note {
   padding: 15px;
   border-radius: 7px;
   box-shadow: 0 1px 5px rgb(138, 137, 137);
+}
+@media (max-width: 500px) {
+  form.create-note {
+    width: 380px;
+  }
+}
+@media (max-width: 400px) {
+  form.create-note {
+    width: 280px;
+  }
 }
 form.create-note input,
 form.create-note textarea {
